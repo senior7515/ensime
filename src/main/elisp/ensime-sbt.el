@@ -82,7 +82,7 @@
   (interactive)
   (ensime-with-conn-interactive
    conn
-   (let ((root-path (ensime-sbt-find-path-to-project))
+   (let ((root-path (ensime-configured-project-root))
 	 (buf (get-buffer-create (ensime-sbt-build-buffer-name))))
 
      (switch-to-buffer-other-window buf)
